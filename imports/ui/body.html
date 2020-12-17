@@ -15,12 +15,37 @@
 
 <!-- USERS INFO -->
 
-<template name="usersInfo">  
+<template name="usersInfo"> 
+    
+    <!--
     <div>
         <div class="user col-md-4 col-s-6 col-xs-12">
             {{>listAll}}
         </div>
-    </div>          
+    </div>
+    -->
+    
+    <div id="contact-cont">
+            {{>contact}}
+    </div>    
+</template>
+
+<!-- PRODUCT LANDING -->
+
+<template name="productLanding"> 
+    
+    <div id="product">
+            {{>product}}
+    </div>    
+</template>
+
+<!-- SURVEY FORM -->
+
+<template name="surveyForm"> 
+    
+    <div id="survey">
+            {{>survey}}
+    </div>    
 </template>
 
 <!-- NAVBAR -->
@@ -62,14 +87,19 @@
                         <a href="#">Wine Total<strong> {{winesCount}}</strong></a>
                     </li>
                     <li class="dropdown shadow">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
                         <ul class="nav dropdown-menu">
-                            <li class="shadow"><a href="/usersInfo">Email</a></li>
-                            <li class="shadow"><a href="#">Address</a></li> 
-                            <li class="shadow"><a href="#">Skype</a></li>
+                            <li class="shadow"><a href="/productLanding">Product</a></li> 
+                            <li class="shadow"><a href="/surveyForm">Feedback</a></li>
+                            <li class="shadow"><a href="/usersInfo">Contact</a></li>
+                            <!--
+                            <li class="shadow"><a href="/usersInfo">News</a></li>
+                            -->
                         </ul>
                     </li>
+                    <!--
                     <li class="shadow"><a href="#">News</a></li>
+                    -->
                 </ul>
             </div>
             <div class="navbar-buttons">

@@ -58,6 +58,20 @@ Router.route('/usersInfo', function(){
     this.render("usersInfo", {to:"main"});
     //this.render("date_display", {to:"footer"});
 });
+
+// PRODUCT LANDING
+Router.route('/productLanding', function(){
+    this.render("navbar", {to:"navbar"});
+    this.render("productLanding", {to:"main"});
+    //this.render("date_display", {to:"footer"});
+});
+ 
+// SURVEY FORM
+Router.route('/surveyForm', function(){
+    this.render("navbar", {to:"navbar"});
+    this.render("surveyForm", {to:"main"});
+    //this.render("date_display", {to:"footer"});
+});
  
 // SINGLE WINE
 Router.route('/wines/:_id', function(){
