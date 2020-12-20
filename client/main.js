@@ -72,6 +72,13 @@ Router.route('/surveyForm', function(){
     this.render("surveyForm", {to:"main"});
     //this.render("date_display", {to:"footer"});
 });
+
+// USERS INFO
+Router.route('/listAll', function(){
+    this.render("navbar", {to:"navbar"});
+    this.render("listAll", {to:"main"});
+    //this.render("date_display", {to:"footer"});
+});
  
 // SINGLE WINE
 Router.route('/wines/:_id', function(){

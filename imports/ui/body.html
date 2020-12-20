@@ -73,33 +73,49 @@
             <div id="main_navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="shadow active"><a href="/Menu">Public Menu</a></li>
+                    <!--
                     {{#if currentUser}}
                     <li class="shadow"><a href="/fullMenu">{{username}} Menu</a></li>
+                    <li class="shadow"><a href="/userList">{{username}} List</a></li>
                     {{/if}}
                     
                     {{#if isInRole 'admin'}}
-                    <li class="shadow"><a href="/userList">{{username}} List</a></li>
                     <li class="shadow"><a href="/wineInv">{{username}} Data</a></li>
                     <li class="shadow"><a href="/wineList">Master</a></li>
                     {{/if}}
-                    
-                    <li class="shadow">
-                        <a href="#">Wine Total<strong> {{winesCount}}</strong></a>
+                    -->
+                    <li class="dropdown shadow">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{username}}<span class="caret"></span></a>
+                        <ul class="nav dropdown-menu">
+                            <!--
+                            <li class="shadow active"><a href="/Menu">Public Menu</a></li>
+                            -->
+                            {{#if currentUser}}
+                            <li class="shadow"><a href="/fullMenu">{{username}} Menu</a></li>
+                            <li class="shadow"><a href="/userList">{{username}} List</a></li>
+                            {{/if}}
+
+                            {{#if isInRole 'admin'}}
+                            <li class="shadow"><a href="/wineInv">{{username}} Inventory</a></li>
+                            <li class="shadow"><a href="/wineList">Master list</a></li>
+                            {{/if}}
+                        </ul>
                     </li>
                     <li class="dropdown shadow">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
                         <ul class="nav dropdown-menu">
                             <li class="shadow"><a href="/productLanding">Product</a></li> 
                             <li class="shadow"><a href="/surveyForm">Feedback</a></li>
-                            <li class="shadow"><a href="/usersInfo">Contact</a></li>
-                            <!--
-                            <li class="shadow"><a href="/usersInfo">News</a></li>
-                            -->
+                            <li class="shadow"><a href="/listAll">Restaurants</a></li>
+                            <li class="shadow"><a href="/usersInfo">Contact us</a></li>
                         </ul>
                     </li>
                     <!--
                     <li class="shadow"><a href="#">News</a></li>
                     -->
+                    <li class="shadow">
+                        <a href="#">Wine Total<strong> {{winesCount}}</strong></a>
+                    </li>
                 </ul>
             </div>
             <div class="navbar-buttons">

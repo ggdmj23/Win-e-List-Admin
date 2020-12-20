@@ -48,31 +48,35 @@ Accounts.ui.config({
             checked: 'checked'
         }],
         visible: true
-    }, {
+    }, */{
         fieldName: 'country',
         fieldLabel: 'Country',
         inputType: 'select',
         showFieldLabel: true,
-        empty: 'Please select your country of residence',
+        empty: 'Please select your country',
         data: [{
             id: 1,
-            label: 'United Kingdom',
-            value: 'uk'
-          }, {
-            id: 2,
-            label: 'United States',
-            value: 'us'
-          }, {
-            id: 3,
             label: 'Argentina',
             value: 'ar'
           }, {
+            id: 2,
+            label: 'France',
+            value: 'fr'
+          }, {
+            id: 3,
+            label: 'Italy',
+            value: 'it'
+          }, {
             id: 4,
             label: 'Spain',
-            value: 'es',
-        }],
+            value: 'es'
+          }, {
+            id: 5,
+            label: 'United Kingdom',
+            value: 'uk'
+          }],
         visible: true
-    }, */
+    }, 
         {
         fieldName: 'roles',
         fieldLabel: 'Profile',

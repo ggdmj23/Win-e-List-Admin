@@ -1620,7 +1620,7 @@ h2 {
 .pricing-list li {
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 5px 0;
 }
 
 .video {
@@ -2029,4 +2029,31 @@ textarea {
     color: #315481;
     text-shadow: 4px 4px 5px #315481;
 }
+
+/****************/
+/* REST-ADDRESS */
+/****************/
+
+.rest-address {
+    margin-top: 80px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

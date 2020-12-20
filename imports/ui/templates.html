@@ -12,15 +12,31 @@
 <!-- USERLIST -->
 
 <template name="listAll">
-    <div class="wine-row-fixedUserList">
+        <!--
         {{#each user}}
         <div class="col-md-12">
             <span>Id: <strong>{{_id}}</strong></span>
             <span>Name: <strong>{{username}}</strong></span>
-            <span>Email: <strong>{{userEmail}}</strong></span>    
-        </div>    
+            <span>Email: <strong>{{userEmail}}</strong></span>
+        -->    
+   
+        {{#each user}}    
+        <div class="col-md-4 rest-address">
+            <section id="">
+                <div class="">
+                    <h2><a href="#" target="_blank">{{username}}</a></h2>
+                    <p>{{userEmail}}</p>
+                </div> 
+                <ul class="">
+                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="mailto:example@example.com"><i class="fas fa-at"></i> Send a mail</a></li>
+                    <li><a href="tel:555-555-5555"><i class="fas fa-mobile-alt"></i> Call us</a></li>
+                </ul>
+            </section>
+        </div>     
         {{/each}}
-    </div>       
+    
 </template>
 
 <!-- CONTACT -->
@@ -43,7 +59,7 @@
             <h2><a href="mailto:example@example.com"><i class="fas fa-at"></i> Send a mail</a></h2>
         </div>
         <div class="contact">
-            <h2><a href="tel:555-555-5555"><i class="fas fa-mobile-alt"></i> Call me</a></h2>
+            <h2><a href="tel:555-555-5555"><i class="fas fa-mobile-alt"></i> Call us</a></h2>
         </div>
     </section>
 </template>
@@ -58,19 +74,19 @@
             <div id="features">
                 <h2>Features</h2>
                 <p><span class="winMini">Win</span><span class="eMini"> e-</span><span class="listMini">List<sup><small> &reg;</small></sup></span> is an on-line wine menu which offers advantages to both guests and wine professionals.</p>
-                <h3>For your guest</h3>
+                <h3>Wine Lover</h3>
                 <ul class="features">
-                    <li>Use their own device: i.e. mobile phone</li>
+                    <li>Use of own device: i.e. mobile phone</li>
                     <li>Highly intuitive</li>
-                    <li>Filter the search</li>
-                    <li>Leave ratings and comments</li>
+                    <li>Search filters</li>
+                    <li>Ratings</li>
                 </ul>
-                <h3>For you, wine professional</h3>
+                <h3>Wine professional</h3>
                 <ul>
-                    <li>Public and private versions of your wine selection</li>
-                    <li>Easy to maintain</li>
-                    <li>Database tool to control your stock</li>
-                    <li>Get feedback from guests</li>
+                    <li>Public and private versions</li>
+                    <li>Easy maintenance</li>
+                    <li>Stock control</li>
+                    <li>Get feedback</li>
                 </ul>
             </div> 
             <div class="video">
@@ -88,9 +104,9 @@
                         <span class="winInverted">Win</span><span class="e-Inverted"> e-</span><span class="listInverted">List<sup><small> &reg;</small></sup></span>
                         <h3>Free</h3>
                         <ul class="pricing-list">
-                            <li>1 Menu</li>
-                            <li>Maximum Storage Capacity 2 GB</li>
-                            <li>3 Free Custom Templates</li>
+                            <li>Public menu</li>
+                            <li>Maximum storage capacity 2 GB</li>
+                            <li>3 Free custom templates</li>
                         </ul>
                         <p>0 <small><sup>€</sup>/<sub>Month</sub></small></p>
                     </div>
@@ -98,9 +114,9 @@
                         <span class="winInverted">Win</span><span class="e-Inverted"> e-</span><span class="listInverted">List<sup><small> &reg;</small></sup></span>
                         <h3>Advanced</h3>
                         <ul class="pricing-list">
-                            <li>3 Menus</li>
-                            <li>Unlimited Storage Capacity</li>
-                            <li>5 Free Custom Templates</li>
+                            <li>Public menu</li>
+                            <li>Unlimited storage capacity</li>
+                            <li>5 Free custom templates</li>
                         </ul>
                         <p>15 <small><sup>€</sup>/<sub>Month</sub></small></p>
                     </div>
@@ -108,10 +124,9 @@
                         <span class="winInverted">Win</span><span class="e-Inverted"> e-</span><span class="listInverted">List<sup><small> &reg;</small></sup></span>
                         <h3>Pro</h3>
                         <ul class="pricing-list">
-                            <li>Unlimited Menus</li>
-                            <li>Unlimited Storage Capacity</li>
-                            <li>Image Editor</li>
-                            <li>Unlimited Custom Temlates</li>
+                            <li>Unlimited menus</li>
+                            <li>Unlimited storage capacity</li>
+                            <li>Unlimited custom templates</li>
                         </ul>
                         <p>22 <small><sup>€</sup>/<sub>Month</sub></small></p>
                     </div>
