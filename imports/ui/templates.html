@@ -1,379 +1,3 @@
-<!-- DATE DISPLAY 
-
-<template name="date_display"> 
-    <nav class="navbar navbar-default navbar-fixed-bottom footer">
-        <div class="navbar-brand date-cont">
-            <span class="date"><small>{{current_date}}</small></span>
-        </div>    
-    </nav>    
-</template> 
--->
-
-<!-- USERLIST -->
-
-<template name="listAll">
-        <!--
-        {{#each user}}
-        <div class="col-md-12">
-            <span>Id: <strong>{{_id}}</strong></span>
-            <span>Name: <strong>{{username}}</strong></span>
-            <span>Email: <strong>{{userEmail}}</strong></span>
-        -->    
-   
-        {{#each user}}    
-        <div class="col-md-4 rest-address">
-            <section id="">
-                <div class="">
-                    <h2><a href="#" target="_blank">{{username}}</a></h2>
-                    <p>{{userEmail}}</p>
-                </div> 
-                <ul class="">
-                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-                    <li><a href="mailto:example@example.com"><i class="fas fa-at"></i> Send a mail</a></li>
-                    <li><a href="tel:555-555-5555"><i class="fas fa-mobile-alt"></i> Call us</a></li>
-                </ul>
-            </section>
-        </div>     
-        {{/each}}
-    
-</template>
-
-<!-- CONTACT -->
-
-<template name="contact">
-    <section id="contact">
-        <div class="contact">
-            <h2><a href="https://codepen.io/ggdmj23" target="_blank"><i class="fab fa-codepen"></i> Codepen</a></h2>
-        </div>
-        <div class="contact">
-            <h2><a id="profile-link" href="https://github.com/ggdmj23" target="_blank"><i class="fab fa-github"></i> GitHub</a></h2>
-        </div>
-        <div class="contact">
-            <h2><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></h2>
-        </div>
-        <div class="contact">
-            <h2><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></h2>
-        </div>
-        <div class="contact">
-            <h2><a href="mailto:example@example.com"><i class="fas fa-at"></i> Send a mail</a></h2>
-        </div>
-        <div class="contact">
-            <h2><a href="tel:555-555-5555"><i class="fas fa-mobile-alt"></i> Call us</a></h2>
-        </div>
-    </section>
-</template>
-
-<!-- PRODUCT LANDING -->
-
-<template name="product">
-    <div id="product-body">
-    <div id="product-container">
-    <div class="article-cont">
-        <div id="article">
-            <div id="features">
-                <h2>Features</h2>
-                <p><span class="winMini">Win</span><span class="eMini"> e-</span><span class="listMini">List<sup><small> &reg;</small></sup></span> is an on-line wine menu which offers advantages to both guests and wine professionals.</p>
-                <h3>Wine Lover</h3>
-                <ul class="features">
-                    <li>Use of own device: i.e. mobile phone</li>
-                    <li>Highly intuitive</li>
-                    <li>Search filters</li>
-                    <li>Ratings</li>
-                </ul>
-                <h3>Wine professional</h3>
-                <ul>
-                    <li>Public and private versions</li>
-                    <li>Easy maintenance</li>
-                    <li>Stock control</li>
-                    <li>Get feedback</li>
-                </ul>
-            </div> 
-            <div class="video">
-                <h2 id="how-it-works">How it works</h2>
-                <video id="video" controls>
-                    <source src="WineList.mp4" type="video/mp4">
-                    <source src="public/WineList.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div id="pricing-features">
-                <h2>Pricing</h2>
-                <div class="flex-container" id="pricing">
-                    <div class="pricing">
-                        <span class="winInverted">Win</span><span class="e-Inverted"> e-</span><span class="listInverted">List<sup><small> &reg;</small></sup></span>
-                        <h3>Free</h3>
-                        <ul class="pricing-list">
-                            <li>Public menu</li>
-                            <li>Maximum storage capacity 2 GB</li>
-                            <li>3 Free custom templates</li>
-                        </ul>
-                        <p>0 <small><sup>€</sup>/<sub>Month</sub></small></p>
-                    </div>
-                    <div class="pricing">
-                        <span class="winInverted">Win</span><span class="e-Inverted"> e-</span><span class="listInverted">List<sup><small> &reg;</small></sup></span>
-                        <h3>Advanced</h3>
-                        <ul class="pricing-list">
-                            <li>Public menu</li>
-                            <li>Unlimited storage capacity</li>
-                            <li>5 Free custom templates</li>
-                        </ul>
-                        <p>15 <small><sup>€</sup>/<sub>Month</sub></small></p>
-                    </div>
-                    <div class="pricing">
-                        <span class="winInverted">Win</span><span class="e-Inverted"> e-</span><span class="listInverted">List<sup><small> &reg;</small></sup></span>
-                        <h3>Pro</h3>
-                        <ul class="pricing-list">
-                            <li>Unlimited menus</li>
-                            <li>Unlimited storage capacity</li>
-                            <li>Unlimited custom templates</li>
-                        </ul>
-                        <p>22 <small><sup>€</sup>/<sub>Month</sub></small></p>
-                    </div>
-                </div> 
-            </div>    
-        </div>
-    </div>     
-    <div class="form-container" id="order-now">
-        <form id="form" method="POST" action="http://localhost/PHP%20ProductLanding/test_ProductLanding.php" target="_blank">
-            <div class="form-field">
-                <label class="label-block" id="name-label" for="name">Name</label>
-                <input class="edit-input" id="name" type="text" name="name" maxlength="32" pattern="[A-Za-z ]{1,32}" placeholder="Enter your name" required/>
-            </div>
-            <div class="form-field">
-                <label class="label-block" id="lname-label" for="lname">Last Name</label>
-                <input class="edit-input" id="lname" type="text" name="lname" maxlength="32" pattern="[A-Za-z ]{1,32}" placeholder="Enter your last name" required/>
-            </div>
-            <div class="form-field">
-                <label class="label-block" id="e-mail" for="email">e-mail</label>
-                <input class="edit-input" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Enter your e-mail" required/>
-            </div>   
-            <div class="form-field">
-                <label class="label-block" id="tel-label" for="tel">Phone Number</label>
-                <input class="edit-input" id="tel" type="tel" name="tel" pattern="[0-9\s\-\+]+" placeholder="Enter your phone number" required/>
-            </div>    
-            <div class="form-field">    
-                <label id="select-label" for="dropdown">Country</label>
-                <select class="edit-input especial" id="dropdown" type="select" name="country" list="select-country" required>
-                    <datalist id="select-country">
-                    <option disabled selected value>Select your country</option>
-                    <option value="spain">Spain</option>
-                    <option value="france">France</option>
-                    <option value="portugal">Portugal</option>
-                    <option value="uk">UK</option>    
-                    <option value="italy">Italy</option>
-                    <option value="germany">Germany</option>
-                    </datalist>
-                </select>
-            </div>  
-            <div class="form-field">  
-                <fieldset>
-                    <legend>Choose your plan</legend>
-                    <p><label class="radio-label" for="radio1"><input id="radio1" type="radio" name="plan" value="Free" checked/> Free</label></p>
-                    <p><label class="radio-label" for="radio2"><input id="radio2" type="radio" name="plan" value="Advanced"/> Advanced</label></p>
-                    <p><label class="radio-label" for="radio3"><input id="radio3" type="radio" name="plan" value="Pro"/> Pro</label></p>
-                </fieldset>    
-            </div>   
-            <div class="form-field">  
-                <fieldset>
-                    <legend>Credit Card</legend>
-                    <p><label class="radio-label2" for="radio4"><input id="radio4" type="radio" name="credit-card" value="visa" /> Visa</label></p>
-                    <p><label class="radio-label2" for="radio5"><input id="radio5" type="radio" name="credit-card" value="master-card"/> Master Card</label></p>
-                    <p><label class="radio-label2" for="radio6"><input id="radio6" type="radio" name="credit-card" value="american-express"/> American Express</label></p>
-                </fieldset>    
-            </div> 
-            <div class="form-field">
-                <label class="label-block" id="card-number-label" for="card-number">Credit Card Number</label>
-                <input class="edit-input" id="card-number" type="password" name="card-number" pattern="[0-9\s\-]+" placeholder="xxxx xxxx xxxx xxxx"/>
-            </div>   
-            <div class="form-field">
-                <label class="label-block" id="card-cvv-label" for="cvv">CVV</label>
-                <input class="edit-input" id="cvv" type="password" name="cvv" pattern="[0-9]{3}" placeholder="xxx"/>
-            </div>   
-
-            <div class="form-field">
-                <label class="label-block" id="card-date-label" for="card-date">Expiry date</label>
-                <input type="month" class="edit-input" id="card-date" name="expiry_date">
-            </div>   
-            <div class="form-field">
-                <input type="button" class="edit-input especial" id="cart" name="cart" value="Total" onclick="onChange(); getPlan(); getPrice();">
-
-            </div>
-        </form>
-        <div class="invoice">
-            <div id="invoice">
-                <h3>Your Purchase</h3>
-                <h4><span class="winMiniLight">Win</span><span class="eMiniLight"> e-</span><span class="listMiniLight">List<sup><small> &reg;</small></sup></span> Version:</h4>
-                <p id="purchase-choice"></p>
-                <h4>Name:</h4>
-                <p id="purchase-name"></p>
-                <h4>Last Name:</h4>
-                <p id="purchase-last-name"></p>
-                <h4>Total:</h4>
-                <p id="purchase-total"></p>
-
-                <input form="form" class="edit-input especial" type="button" id="submit" value="Submit"/>
-            </div>
-
-        </div>  
-        <div class="product-contact">
-            <address id="product-contact">
-                <h3>Contact</h3>
-                <h4>e-mail:</h4>
-                <p><a href="mailto:webmaster@example.com">wine_List@example.com</a></p>
-                <h4>Visit us at:</h4>
-                <p><a href="#">wine_list.com</a></p>
-                <h4>Address:</h4>
-                <p>Box 564, Barcelona</p>
-                <p>Spain</p>
-            </address>
-        </div>  
-    </div>
-        
-    </div>    
-    </div> 
-    
-<script>  
-    function getPlan() {
-
-        if (document.getElementById('radio1').checked) {
-            plan_value = document.getElementById('radio1').value;
-        }
-        else if (document.getElementById('radio2').checked) {
-            plan_value = document.getElementById('radio2').value;
-        }
-        else if (document.getElementById('radio3').checked) {
-            plan_value = document.getElementById('radio3').value;
-        }
-        return document.getElementById("purchase-choice").innerHTML = plan_value;
-    }
-
-    function getPrice() {
-
-        if (document.getElementById('radio1').checked) {
-            plan_price = 0 + " €";
-        }
-        else if (document.getElementById('radio2').checked) {
-            plan_price = 15 + " €";
-        }
-        else if (document.getElementById('radio3').checked) {
-            plan_price = 22 + " €";
-        }
-        return document.getElementById("purchase-total").innerHTML = plan_price;
-    }
-
-    function onChange (){
-
-        var name = document.getElementById("name").value;
-        var lname = document.getElementById("lname").value;
-
-        if (name != "" || lname != ""){
-            document.getElementById("purchase-name").innerHTML = name;
-            document.getElementById("purchase-last-name").innerHTML = lname;
-
-        }
-        else {
-            document.getElementById("purchase-name").innerHTML = "Enter your name";
-            document.getElementById("purchase-last-name").innerHTML = "Enter your last name";
-
-        }
-    }    
-</script>  
-</template>
-
-<!-- SURVEY FORM -->
-
-<template name="survey">
-    <div id="survey-body">
-        <div class="survey-container">
-            <header>
-                <h1 id="title"><span class="win-cover">Win</span><span class="e-cover"> e-</span><span class="list-cover">List<sup><small> &reg;</small></sup></span><span class="survey"> Survey Form</span></h1>
-                <h2 id="description">Thank you for taking the time to help us improve the platform</h2>
-            </header>
-            <div class="surveyForm-container">
-                <form id="survey-form" method="POST" action="#">
-                    <div class="surveyForm-field">
-                        <label class="label-block" id="name-label" for="name">Name</label>
-                        <input class="surveyEdit-input" id="name" type="text" name="name" maxlength="32" pattern="[a-zA-Z0-9\s]+" placeholder="Enter your name" required/>
-                    </div>
-                    <div class="surveyForm-field">
-                        <label class="label-block" id="email-label" for="email">Email</label>
-                        <input class="surveyEdit-input" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Enter your Email" required/>
-                    </div>    
-                    <div class="surveyForm-field">    
-                        <label class="label-block" id="number-label" for="number">Age (optional)</label>
-                        <input class="surveyEdit-input" id="number" type="number" name="age" pattern="[0-9]+" min="18" max="110" step="1" placeholder="Age"/>
-                    </div>    
-                    <div class="surveyForm-field">    
-                        <label id="select-label" for="dropdown">Which option best describes your current role?</label>
-                        <select class="surveyEdit-input" id="dropdown" type="select" name="role" list="select-role" required>
-                            <datalist id="select-role">
-                            <option disabled selected value>Select current role</option>
-                            <option value="customer">Customer</option>
-                            <option value="sommelier">Sommelier</option>
-                            <option value="staff">Staff</option>
-                            <option value="management">Management</option>
-                            <option value="other">Other</option>
-                            </datalist>
-                        </select>
-                    </div>  
-                    <div class="surveyForm-field">  
-                        <fieldset>
-                            <legend>How easy was to find your wine?</legend>
-                            <p><label class="radio-label" for="radio1"><input id="radio1" type="radio" name="usability" value="easy" checked/> Easy</label></p>
-                            <p><label class="radio-label" for="radio2"><input id="radio2" type="radio" name="usability" value="normal"/> Normal</label></p>
-                            <p><label class="radio-label" for="radio3"><input id="radio3" type="radio" name="usability" value="difficult"/> Difficult</label></p>
-                        </fieldset>    
-                    </div>   
-                    <div class="surveyForm-field">  
-                        <fieldset>
-                            <legend>Would you recommend Win e-List?</legend>
-                            <p><label class="radio-label" for="radio4"><input id="radio4" type="radio" name="recommend" value="definitely" checked/> Definitely</label></p>
-                            <p><label class="radio-label" for="radio5"><input id="radio5" type="radio" name="recommend" value="maybe"/> Maybe</label></p>
-                            <p><label class="radio-label" for="radio6"><input id="radio6" type="radio" name="recommend" value="not-sure"/> Not sure</label></p>
-                        </fieldset>    
-                    </div>   
-                    <div class="surveyForm-field">    
-                        <label id="select-label2" for="dropdown2">What is your favorite feature of Win e-List?</label>
-                        <select class="surveyEdit-input" id="dropdown2" type="select" name="feature" list="select-feature">
-                            <datalist id="select-feature">
-                            <option disabled selected value>Select an option</option>
-                            <option value="public"> Public menus</option>
-                            <option value="images"> Images</option>
-                            <option value="custom"> Custom menus</option>
-                            <option value="search"> Search filters</option>
-                            <option value="data"> Wine data</option>
-                            </datalist>
-                        </select>
-                    </div>  
-                    <div class="surveyForm-field">  
-                        <fieldset>
-                            <legend>Which information would you like to receive from us? (Check all that apply)</legend>
-                            <p><label class="checkbox-label" for="checkbox1"><input id="checkbox1" type="checkbox" name="info" value="tasting"/> Tastings</label></p>
-                            <p><label class="checkbox-label" for="checkbox2"><input id="checkbox2" type="checkbox" name="info" value="event"/> Events</label></p>
-                            <p><label class="checkbox-label" for="checkbox3"><input id="checkbox3" type="checkbox" name="info" value="visit"/> Visits</label></p>
-                            <p><label class="checkbox-label" for="checkbox4"><input id="checkbox4" type="checkbox" name="info" value="course"/> Courses</label></p>
-                            <p><label class="checkbox-label" for="checkbox5"><input id="checkbox5" type="checkbox" name="info" value="job"/> Jobs</label></p>
-                            <p><label class="checkbox-label" for="checkbox6"><input id="checkbox6" type="checkbox" name="info" value="document"/> Documentation</label></p>
-                        </fieldset>    
-                    </div>  
-                    <div class="surveyForm-field">
-                        <label class="label-block" for="comments">Any comments or suggestions?</label>
-                        <textarea class="surveyEdit-input" id="comments" name="comment" placeholder="Enter your comment here..."></textarea>
-                    </div>
-                    <div class="surveyForm-field">
-                        <button class="surveyEdit-input" type="button" id="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
-            <footer id="footer">
-                <p id="title"><span class="winMini">Win</span><span class="e-Mini"> e-</span><span class="listMini">List<sup><small> &reg;</small></sup></span></p>
-                <p class="survey"><small>&copy; Copyright 2020 ggdmj23</small></p>
-            </footer>
-        </div>   
-    </div>
-</template>
-
 <!-- MENU THUMBNAIL -->
 
 <template name="wineList"> 
@@ -457,7 +81,7 @@
     <div class="row">
         <div class="col-md-12 col-s-12 col-xs-12">
             <div class="thumbnailSingleMenu">
-                <div class="container img-contSingleMenu">
+                <div class="img-contSingleMenu">
                     <a href="##" onClick="history.go(-1); return false;"><img class="imgSingleMenu" src="{{w_img}}"/></a>
                 </div>
                 <div class="captionSingleMenu">
@@ -572,4 +196,366 @@
      </header>   
 </template>
 
+<!-- DATE DISPLAY 
+
+<template name="date_display"> 
+    <nav class="navbar navbar-default navbar-fixed-bottom footer">
+        <div class="navbar-brand date-cont">
+            <span class="date"><small>{{current_date}}</small></span>
+        </div>    
+    </nav>    
+</template> 
+-->
+
+<!-- USERLIST -->
+
+<template name="listAll">
+    <!--
+    {{#each user}}
+    <div class="col-md-12">
+        <span>Id: <strong>{{_id}}</strong></span>
+        <span>Name: <strong>{{username}}</strong></span>
+        <span>Email: <strong>{{userEmail}}</strong></span>
+    -->    
+    {{#each user}}    
+    <div class="col-md-4">
+        <div id="rest-address">
+            <h2><a href="#">{{username}}</a></h2>
+            <ul class="">
+                <li>{{userEmail}}</li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="mailto:example@example.com"><i class="fas fa-at"></i> Send a mail</a></li>
+                <li><a href="tel:555-555-5555"><i class="fas fa-mobile-alt"></i> Call us</a></li>
+            </ul>
+        </div>    
+    </div>     
+    {{/each}}
+</template>
+
+<!-- CONTACT -->
+
+<template name="contact">
+    <section id="contact">
+        <div class="contact">
+            <h2><a href="https://codepen.io/ggdmj23" target="_blank"><i class="fab fa-codepen"></i> Codepen</a></h2>
+        </div>
+        <div class="contact">
+            <h2><a id="profile-link" href="https://github.com/ggdmj23" target="_blank"><i class="fab fa-github"></i> GitHub</a></h2>
+        </div>
+        <div class="contact">
+            <h2><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></h2>
+        </div>
+        <div class="contact">
+            <h2><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></h2>
+        </div>
+        <div class="contact">
+            <h2><a href="mailto:example@example.com"><i class="fas fa-at"></i> Send a mail</a></h2>
+        </div>
+        <div class="contact">
+            <h2><a href="tel:555-555-5555"><i class="fas fa-mobile-alt"></i> Call us</a></h2>
+        </div>
+    </section>
+</template>
+
+<!-- PRODUCT LANDING -->
+
+<template name="product">
+<div id="product-body">
+    <div id="product-container">
+        <div class="article-cont">
+            <div id="article">
+                <div id="features">
+                    <h2>Features</h2>
+                    <p><span class="winMini">Win</span><span class="eMini"> e-</span><span class="listMini">List<sup><small> &reg;</small></sup></span> is an on-line wine menu which offers advantages to both guests and wine professionals.</p>
+                    <h3>Wine Lover</h3>
+                    <ul class="features">
+                        <li>Use of own device: i.e. mobile phone</li>
+                        <li>Highly intuitive</li>
+                        <li>Search filters</li>
+                        <li>Ratings</li>
+                    </ul>
+                    <h3>Wine professional</h3>
+                    <ul>
+                        <li>Public and private versions</li>
+                        <li>Easy maintenance</li>
+                        <li>Stock control</li>
+                        <li>Get feedback</li>
+                    </ul>
+                </div> 
+                <div class="video">
+                    <h2 id="how-it-works">How it works</h2>
+                    <video id="video" controls>
+                        <source src="wineList.mp4" type="video/mp4">
+                        <source src="public/wineList.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="pricing-features">
+                    <h2>Pricing</h2>
+                    <div class="flex-container" id="pricing">
+                        <div class="pricing">
+                            <span class="winInverted">Win</span><span class="e-Inverted"> e-</span><span class="listInverted">List<sup><small> &reg;</small></sup></span>
+                            <h3>Free</h3>
+                            <ul class="pricing-list">
+                                <li>Public menu</li>
+                                <li>Maximum storage capacity 2 GB</li>
+                                <li>3 Free custom templates</li>
+                            </ul>
+                            <p>0 <small><sup>€</sup>/<sub>Month</sub></small></p>
+                        </div>
+                        <div class="pricing">
+                            <span class="winInverted">Win</span><span class="e-Inverted"> e-</span><span class="listInverted">List<sup><small> &reg;</small></sup></span>
+                            <h3>Advanced</h3>
+                            <ul class="pricing-list">
+                                <li>Public menu</li>
+                                <li>Unlimited storage capacity</li>
+                                <li>5 Free custom templates</li>
+                            </ul>
+                            <p>15 <small><sup>€</sup>/<sub>Month</sub></small></p>
+                        </div>
+                        <div class="pricing">
+                            <span class="winInverted">Win</span><span class="e-Inverted"> e-</span><span class="listInverted">List<sup><small> &reg;</small></sup></span>
+                            <h3>Pro</h3>
+                            <ul class="pricing-list">
+                                <li>Unlimited menus</li>
+                                <li>Unlimited storage capacity</li>
+                                <li>Unlimited custom templates</li>
+                            </ul>
+                            <p>22 <small><sup>€</sup>/<sub>Month</sub></small></p>
+                        </div>
+                    </div> 
+                </div>    
+            </div>
+        </div>     
+        <div class="form-container" id="order-now">
+            <form id="form" method="POST" action="http://localhost/PHP%20ProductLanding/test_ProductLanding.php" target="_blank">
+                <div class="form-field">
+                    <label class="label-block" id="name-label" for="name">Name</label>
+                    <input class="edit-input" id="name" type="text" name="name" maxlength="32" pattern="[A-Za-z ]{1,32}" placeholder="Enter your name" required/>
+                </div>
+                <div class="form-field">
+                    <label class="label-block" id="lname-label" for="lname">Last Name</label>
+                    <input class="edit-input" id="lname" type="text" name="lname" maxlength="32" pattern="[A-Za-z ]{1,32}" placeholder="Enter your last name" required/>
+                </div>
+                <div class="form-field">
+                    <label class="label-block" id="e-mail" for="email">e-mail</label>
+                    <input class="edit-input" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Enter your e-mail" required/>
+                </div>   
+                <div class="form-field">
+                    <label class="label-block" id="tel-label" for="tel">Phone Number</label>
+                    <input class="edit-input" id="tel" type="tel" name="tel" pattern="[0-9\s\-\+]+" placeholder="Enter your phone number" required/>
+                </div>    
+                <div class="form-field">    
+                    <label id="select-label" for="dropdown">Country</label>
+                    <select class="edit-input especial" id="dropdown" type="select" name="country" list="select-country" required>
+                        <datalist id="select-country">
+                        <option disabled selected value>Select your country</option>
+                        <option value="spain">Spain</option>
+                        <option value="france">France</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="uk">UK</option>    
+                        <option value="italy">Italy</option>
+                        <option value="germany">Germany</option>
+                        </datalist>
+                    </select>
+                </div>  
+                <div class="form-field">  
+                    <fieldset>
+                        <legend>Choose your plan</legend>
+                        <p><label class="radio-label" for="radio1"><input id="radio1" type="radio" name="plan" value="Free" checked/> Free</label></p>
+                        <p><label class="radio-label" for="radio2"><input id="radio2" type="radio" name="plan" value="Advanced"/> Advanced</label></p>
+                        <p><label class="radio-label" for="radio3"><input id="radio3" type="radio" name="plan" value="Pro"/> Pro</label></p>
+                    </fieldset>    
+                </div>   
+                <div class="form-field">  
+                    <fieldset>
+                        <legend>Credit Card</legend>
+                        <p><label class="radio-label2" for="radio4"><input id="radio4" type="radio" name="credit-card" value="visa" /> Visa</label></p>
+                        <p><label class="radio-label2" for="radio5"><input id="radio5" type="radio" name="credit-card" value="master-card"/> Master Card</label></p>
+                        <p><label class="radio-label2" for="radio6"><input id="radio6" type="radio" name="credit-card" value="american-express"/> American Express</label></p>
+                    </fieldset>    
+                </div> 
+                <div class="form-field">
+                    <label class="label-block" id="card-number-label" for="card-number">Credit Card Number</label>
+                    <input class="edit-input" id="card-number" type="password" name="card-number" pattern="[0-9\s\-]+" placeholder="xxxx xxxx xxxx xxxx"/>
+                </div>   
+                <div class="form-field">
+                    <label class="label-block" id="card-cvv-label" for="cvv">CVV</label>
+                    <input class="edit-input" id="cvv" type="password" name="cvv" pattern="[0-9]{3}" placeholder="xxx"/>
+                </div>   
+
+                <div class="form-field">
+                    <label class="label-block" id="card-date-label" for="card-date">Expiry date</label>
+                    <input type="month" class="edit-input" id="card-date" name="expiry_date">
+                </div>   
+                <div class="form-field">
+                    <input type="button" class="edit-input especial" id="cart" name="cart" value="Total" onclick="onChange(); getPlan(); getPrice();">
+                </div>
+            </form>
+            <div class="invoice">
+                <div id="invoice">
+                    <h3>Your Purchase</h3>
+                    <h4><span class="winMiniLight">Win</span><span class="eMiniLight"> e-</span><span class="listMiniLight">List<sup><small> &reg;</small></sup></span> Version:</h4>
+                    <p id="purchase-choice"></p>
+                    <h4>Name:</h4>
+                    <p id="purchase-name"></p>
+                    <h4>Last Name:</h4>
+                    <p id="purchase-last-name"></p>
+                    <h4>Total:</h4>
+                    <p id="purchase-total"></p>
+                    <input form="form" class="edit-input especial" type="button" id="submit" value="Submit"/>
+                </div>
+            </div>  
+            <div class="product-contact">
+                <address id="product-contact">
+                    <h3>Contact</h3>
+                    <h4>e-mail:</h4>
+                    <p><a href="mailto:webmaster@example.com">wine_List@example.com</a></p>
+                    <h4>Visit us at:</h4>
+                    <p><a href="#">wine_list.com</a></p>
+                    <h4>Address:</h4>
+                    <p>Box 564, Barcelona</p>
+                    <p>Spain</p>
+                </address>
+            </div>  
+        </div>
+    </div>    
+</div> 
+    
+<script>  
+    function getPlan() {
+        if (document.getElementById('radio1').checked) {
+            plan_value = document.getElementById('radio1').value;
+        }
+        else if (document.getElementById('radio2').checked) {
+            plan_value = document.getElementById('radio2').value;
+        }
+        else if (document.getElementById('radio3').checked) {
+            plan_value = document.getElementById('radio3').value;
+        }
+        return document.getElementById("purchase-choice").innerHTML = plan_value;
+    }
+
+    function getPrice() {
+        if (document.getElementById('radio1').checked) {
+            plan_price = 0 + " €";
+        }
+        else if (document.getElementById('radio2').checked) {
+            plan_price = 15 + " €";
+        }
+        else if (document.getElementById('radio3').checked) {
+            plan_price = 22 + " €";
+        }
+        return document.getElementById("purchase-total").innerHTML = plan_price;
+    }
+
+    function onChange (){
+        var name = document.getElementById("name").value;
+        var lname = document.getElementById("lname").value;
+
+        if (name != "" || lname != ""){
+            document.getElementById("purchase-name").innerHTML = name;
+            document.getElementById("purchase-last-name").innerHTML = lname;
+        }
+        else {
+            document.getElementById("purchase-name").innerHTML = "Enter your name";
+            document.getElementById("purchase-last-name").innerHTML = "Enter your last name";
+        }
+    }    
+</script>  
+</template>
+
+<!-- SURVEY FORM -->
+
+<template name="survey">
+    <div id="survey-body">
+        <div class="survey-container">
+            <header>
+                <h1 id="title"><span class="win-cover">Win</span><span class="e-cover"> e-</span><span class="list-cover">List<sup><small> &reg;</small></sup></span><span class="survey"> Survey Form</span></h1>
+                <h2 id="description">Thank you for taking the time to help us improve the platform</h2>
+            </header>
+            <div class="surveyForm-container">
+                <form id="survey-form" method="POST" action="#">
+                    <div class="surveyForm-field">
+                        <label class="label-block" id="name-label" for="name">Name</label>
+                        <input class="surveyEdit-input" id="name" type="text" name="name" maxlength="32" pattern="[a-zA-Z0-9\s]+" placeholder="Enter your name" required/>
+                    </div>
+                    <div class="surveyForm-field">
+                        <label class="label-block" id="email-label" for="email">Email</label>
+                        <input class="surveyEdit-input" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Enter your Email" required/>
+                    </div>    
+                    <div class="surveyForm-field">    
+                        <label class="label-block" id="number-label" for="number">Age (optional)</label>
+                        <input class="surveyEdit-input" id="number" type="number" name="age" pattern="[0-9]+" min="18" max="110" step="1" placeholder="Age"/>
+                    </div>    
+                    <div class="surveyForm-field">    
+                        <label id="select-label" for="dropdown">Which option best describes your current role?</label>
+                        <select class="surveyEdit-input" id="dropdown" type="select" name="role" list="select-role" required>
+                            <datalist id="select-role">
+                            <option disabled selected value>Select current role</option>
+                            <option value="customer">Customer</option>
+                            <option value="sommelier">Sommelier</option>
+                            <option value="staff">Staff</option>
+                            <option value="management">Management</option>
+                            <option value="other">Other</option>
+                            </datalist>
+                        </select>
+                    </div>  
+                    <div class="surveyForm-field">  
+                        <fieldset>
+                            <legend>How easy was to find your wine?</legend>
+                            <p><label class="radio-label" for="radio1"><input id="radio1" type="radio" name="usability" value="easy" checked/> Easy</label></p>
+                            <p><label class="radio-label" for="radio2"><input id="radio2" type="radio" name="usability" value="normal"/> Normal</label></p>
+                            <p><label class="radio-label" for="radio3"><input id="radio3" type="radio" name="usability" value="difficult"/> Difficult</label></p>
+                        </fieldset>    
+                    </div>   
+                    <div class="surveyForm-field">  
+                        <fieldset>
+                            <legend>Would you recommend Win e-List?</legend>
+                            <p><label class="radio-label" for="radio4"><input id="radio4" type="radio" name="recommend" value="definitely" checked/> Definitely</label></p>
+                            <p><label class="radio-label" for="radio5"><input id="radio5" type="radio" name="recommend" value="maybe"/> Maybe</label></p>
+                            <p><label class="radio-label" for="radio6"><input id="radio6" type="radio" name="recommend" value="not-sure"/> Not sure</label></p>
+                        </fieldset>    
+                    </div>   
+                    <div class="surveyForm-field">    
+                        <label id="select-label2" for="dropdown2">What is your favorite feature of Win e-List?</label>
+                        <select class="surveyEdit-input" id="dropdown2" type="select" name="feature" list="select-feature">
+                            <datalist id="select-feature">
+                            <option disabled selected value>Select an option</option>
+                            <option value="public"> Public menus</option>
+                            <option value="images"> Images</option>
+                            <option value="custom"> Custom menus</option>
+                            <option value="search"> Search filters</option>
+                            <option value="data"> Wine data</option>
+                            </datalist>
+                        </select>
+                    </div>  
+                    <div class="surveyForm-field">  
+                        <fieldset>
+                            <legend>Which information would you like to receive from us? (Check all that apply)</legend>
+                            <p><label class="checkbox-label" for="checkbox1"><input id="checkbox1" type="checkbox" name="info" value="tasting"/> Tastings</label></p>
+                            <p><label class="checkbox-label" for="checkbox2"><input id="checkbox2" type="checkbox" name="info" value="event"/> Events</label></p>
+                            <p><label class="checkbox-label" for="checkbox3"><input id="checkbox3" type="checkbox" name="info" value="visit"/> Visits</label></p>
+                            <p><label class="checkbox-label" for="checkbox4"><input id="checkbox4" type="checkbox" name="info" value="course"/> Courses</label></p>
+                            <p><label class="checkbox-label" for="checkbox5"><input id="checkbox5" type="checkbox" name="info" value="job"/> Jobs</label></p>
+                            <p><label class="checkbox-label" for="checkbox6"><input id="checkbox6" type="checkbox" name="info" value="document"/> Documentation</label></p>
+                        </fieldset>    
+                    </div>  
+                    <div class="surveyForm-field">
+                        <label class="label-block" for="comments">Any comments or suggestions?</label>
+                        <textarea class="surveyEdit-input" id="comments" name="comment" placeholder="Enter your comment here..."></textarea>
+                    </div>
+                    <div class="surveyForm-field">
+                        <button class="surveyEdit-input" type="button" id="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <footer id="footer">
+                <p id="title"><span class="winMini">Win</span><span class="e-Mini"> e-</span><span class="listMini">List<sup><small> &reg;</small></sup></span></p>
+                <p class="survey"><small>&copy; Copyright 2020 ggdmj23</small></p>
+            </footer>
+        </div>   
+    </div>
+</template>
 

@@ -1,0 +1,13 @@
+regularUsers
+user: ristorante nebbia di mare
+password: nebbia
+
+adminUsers
+user: restaurante aire
+password: airgon
+
+user: restaurant gaston's
+password: gaston
+
+
+

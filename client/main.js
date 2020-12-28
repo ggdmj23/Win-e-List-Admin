@@ -73,7 +73,7 @@ Router.route('/surveyForm', function(){
     //this.render("date_display", {to:"footer"});
 });
 
-// USERS INFO
+// RESTAURANTS INFO
 Router.route('/listAll', function(){
     this.render("navbar", {to:"navbar"});
     this.render("listAll", {to:"main"});

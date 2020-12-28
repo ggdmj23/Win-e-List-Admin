@@ -461,7 +461,7 @@ Template.sidenav.helpers({
             return user.username;
         }
         else{
-            return "Full";
+            return "All Wines";
         }
     },
     
